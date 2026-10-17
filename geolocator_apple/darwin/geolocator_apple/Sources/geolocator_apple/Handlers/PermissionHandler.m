@@ -26,9 +26,6 @@
   return self.locationManager;
 }
 
-// Blocks on a synchronous XPC reply from locationd, so call it off the main
-// thread. The class method avoids creating a CLLocationManager, which also
-// blocks on locationd.
 - (CLAuthorizationStatus) checkPermission {
   return [CLLocationManager authorizationStatus];
 }
